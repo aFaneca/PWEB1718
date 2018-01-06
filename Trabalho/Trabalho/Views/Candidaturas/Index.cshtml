@@ -5,9 +5,14 @@
 }
 
 <h2>Candidaturas</h2>
-
+@if (ViewBag.Erro != null)
+{
+    <div class="alert alert-danger">
+        <strong>Erro!</strong> @ViewBag.erro
+    </div>
+}
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Submeter Nova Candidatura", "Create")
 </p>
 <table class="table">
     <tr>
@@ -25,7 +30,7 @@
 
     @foreach (var item in Model)
     {
-        
+
         if (item.UserId == HttpContext.Current.User.Identity.GetUserId() || User.IsInRole("Administrador"))
         {
             <tr>
@@ -33,15 +38,15 @@
                     @Html.DisplayFor(modelItem => item.Estado)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.CriancaId)
+                    @Html.DisplayFor(modelItem => item.NomeCrianca)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.InstituicaoId)
+                    @Html.DisplayFor(modelItem => item.NomeInstituicao)
                 </td>
                 <td>
                     @Html.ActionLink("Editar", "Edit", new { id = item.CandidaturaId }) |
                     @Html.ActionLink("Detalhes", "Details", new { id = item.CandidaturaId }) |
-                    @Html.ActionLink("Cancelar Candidatura", "Delete", new { id = item.CandidaturaId }) | 
+                    @Html.ActionLink("Cancelar Candidatura", "Delete", new { id = item.CandidaturaId }) |
                     @Html.ActionLink("Avaliar Instituição", "Avaliar", new { id = item.CandidaturaId })
                 </td>
             </tr>
@@ -49,3 +54,4 @@
     }
 
 </table>
+

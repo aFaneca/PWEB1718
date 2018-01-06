@@ -68,23 +68,17 @@ namespace Trabalho.Controllers
             return RedirectToAction("Lista");
         }
 
-        [Authorize(Roles = "Pais")]
-        public JavaScriptResult ErroAvaliar()
-        {
-            string a = "alert('Precisa de ter uma candidatura aceite na Instituição para a poder avaliar!')";
-            return JavaScript(a);
-        }
-
-
 
         // GET: Candidaturas/Avaliar/5
         [Authorize(Roles = "Pais")]
         public ActionResult Avaliar(int id)
         {
-
             Candidatura candidatura = db.Candidaturas.Find(id);
-            if(candidatura.Estado != "Aprovado")
-                return RedirectToAction("ErroAvaliar");
+            if (candidatura.Estado != "Aprovado")
+            {
+                ViewBag.Erro = "Precisa de ter uma criança inscrita na Instituição para a poder avaliar.";
+                return View("Index", db.Candidaturas.ToList());
+            }
             var a = candidatura.InstituicaoId;
             if (candidatura == null)
             {
@@ -124,6 +118,16 @@ namespace Trabalho.Controllers
         [Authorize(Roles = "Pais, Administrador")]
         public ActionResult Index()
         {
+
+            foreach (var x in db.Candidaturas.ToList())
+            {
+                x.NomeInstituicao = db.Instituicaos.Find(x.InstituicaoId).Nome;
+            }
+            foreach (var x in db.Candidaturas.ToList())
+            {
+                x.NomeCrianca = db.Criancas.Find(x.CriancaId).Nome;
+            }
+
             return View(db.Candidaturas.ToList());
         }
 
@@ -134,6 +138,16 @@ namespace Trabalho.Controllers
         [Authorize(Roles = "Pais, Administrador")]
         public ActionResult Details(int? id)
         {
+
+            foreach (var x in db.Candidaturas.ToList())
+            {
+                x.NomeInstituicao = db.Instituicaos.Find(x.InstituicaoId).Nome;
+            }
+            foreach (var x in db.Candidaturas.ToList())
+            {
+                x.NomeCrianca = db.Criancas.Find(x.CriancaId).Nome;
+            }
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

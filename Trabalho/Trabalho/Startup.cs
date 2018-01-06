@@ -97,28 +97,28 @@ namespace Trabalho
             }
 
                
-            if (!roleManager.RoleExists("Geral"))
-            {
-                var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-                role.Name = "Geral";
-                roleManager.Create(role);
+            //if (!roleManager.RoleExists("Geral"))
+            //{
+            //    var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+            //    role.Name = "Geral";
+            //    roleManager.Create(role);
 
 
-                // CRIAÇÃO DE CONTA            
-                var user4 = new ApplicationUser();
-                user4.UserName = "geral@pw.pw";
-                user4.Email = "geral@pw.pw";
+            //    // CRIAÇÃO DE CONTA            
+            //    var user4 = new ApplicationUser();
+            //    user4.UserName = "geral@pw.pw";
+            //    user4.Email = "geral@pw.pw";
 
-                string userPWD = "Geral_123";
+            //    string userPWD = "Geral_123";
 
-                var chkUser = UserManager.Create(user4, userPWD);
+            //    var chkUser = UserManager.Create(user4, userPWD);
 
-                //ASSOCIA ESSA CONTA AO PERFIL    
-                if (chkUser.Succeeded)
-                {
-                    var result4 = UserManager.AddToRole(user4.Id, "Geral");
-                }
-            }
+            //    //ASSOCIA ESSA CONTA AO PERFIL    
+            //    if (chkUser.Succeeded)
+            //    {
+            //        var result4 = UserManager.AddToRole(user4.Id, "Geral");
+            //    }
+            //}
         }
 
     }

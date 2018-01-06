@@ -1,10 +1,10 @@
 ﻿@model Trabalho.Models.Candidatura
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalhes da Candidatura";
 }
 
-<h2>Details</h2>
+<h2>Detalhes da Candidatura</h2>
 
 <div>
     <h4>Candidatura</h4>
@@ -23,7 +23,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CriancaId)
+            @Html.DisplayFor(model => model.NomeCrianca)
         </dd>
 
         <dt>
@@ -31,12 +31,12 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.InstituicaoId)
+            @Html.DisplayFor(model => model.NomeInstituicao)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CandidaturaId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.CandidaturaId }) |
+    @Html.ActionLink("Voltar à lista", "Index")
 </p>

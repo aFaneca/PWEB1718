@@ -10,24 +10,12 @@
     <h4>Alterar configurações de sua conta</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>Senha:</dt>
-        <dd>
-            [
-            @if (Model.HasPassword)
-        {
-            @Html.ActionLink("Alterar sua senha", "ChangePassword")
-    }
-    else
-    {
-        @Html.ActionLink("Criar", "SetPassword")
-}
-            ]
-        </dd>
-        <dt>Logins externos:</dt>
+
+        @*<dt>Logins externos:</dt>
         <dd>
             @Model.Logins.Count [
             @Html.ActionLink("Gerenciar", "ManageLogins") ]
-        </dd>
+        </dd>*@
         @*
         Os Números de Telefone podem ser usados como um segundo fator de verificação em um sistema de autenticação de dois fatores.
 
@@ -56,42 +44,80 @@
             }
         </dd>
         *@
-        <dt>Autenticação de dois fatores:</dt>
+        @*<dt>Autenticação de dois fatores:</dt>
         <dd>
             <p>
                 Não há provedores de autenticação de dois fatores configurados. Consulte <a href="https://go.microsoft.com/fwlink/?LinkId=403804">este artigo</a>
                 para obter detalhes sobre como configurar este aplicativo ASP.NET para dar suporte à autenticação de dois fatores.
-            </p>
-            @*@if (Model.TwoFactor)
+            </p>*@
+        @*@if (Model.TwoFactor)
+        {
+            using (Html.BeginForm("DisableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
-                using (Html.BeginForm("DisableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                {
-                    @Html.AntiForgeryToken()
-                    <text>Ativado
-                    <input type="submit" value="Desativar" class="btn btn-link" />
-                    </text>
-                }
+                @Html.AntiForgeryToken()
+                <text>Ativado
+                <input type="submit" value="Desativar" class="btn btn-link" />
+                </text>
             }
-            else
+        }
+        else
+        {
+            using (Html.BeginForm("EnableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
-                using (Html.BeginForm("EnableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                {
-                    @Html.AntiForgeryToken()
-                    <text>Desativado
-                    <input type="submit" value="Ativar" class="btn btn-link" />
-                    </text>
-                }
-            }*@
-        </dd>
-        <dt>Perfis</dt>
-        <dd><a href="/Perfil/">Gerir Perfis</a></dd>
+                @Html.AntiForgeryToken()
+                <text>Desativado
+                <input type="submit" value="Ativar" class="btn btn-link" />
+                </text>
+            }
+        }*@
+        @*</dd>*@
+        <hr />
+        @*<dt>Perfis</dt>
+        <dd>@Html.ActionLink("Gerir Perfis", "", "Perfil")</dd>
         <dt>Instituições</dt>
-        <dd><a href="/Instituicoes/Todas/">Gerir Instituições</a></dd>
+        <dd>@Html.ActionLink("Gerir Instituições", "Todas", "Instituicoes")</dd>
         <dt>Crianças</dt>
-        <dd><a href="/Criancas/">Gerir Crianças</a></dd>
+        <dd>@Html.ActionLink("Gerir Crianças", "", "Criancas")</dd>
         <dt>Candidaturas</dt>
-        <dd><a href="/Candidaturas/">Gerir Candidaturas</a></dd>
+        <dd>@Html.ActionLink("Gerir Candidaturas", "", "Candidaturas")</dd>
         <dt>Membros</dt>
-        <dd><a href="/Perfil/Membros/">Listar Todos os Membros Registados</a></dd>
+        <dd>@Html.ActionLink("Listar Todos os Membros Registados", "Membros", "Perfil")</dd>*@
+
+
+
+        <div class="col-xs-6">
+            <a href="/Perfil" class="btn btn-warning btn-block">Gerir Perfis</a>
+        </div>
+        <div class="col-xs-6">
+            <a href="/Instituicoes/Todas" class="btn btn-success btn-block">Gerir Instituições</a>
+        </div>
+        <br />
+        <br />
+        <div class="col-xs-6">
+            <a href="/Criancas" class="btn btn-success btn-block">Gerir Crianças</a>
+        </div>
+        <div class="col-xs-6">
+            <a href="/Candidaturas" class="btn btn-warning btn-block">Gerir Candidaturas</a>
+        </div>
+        <br />
+        <br />
+
+        <center>
+            <a href="/Perfil/Membros" style="width: 97.5%;" class="btn btn-primary btn-block">Listar Todos os Membros Registados</a>
+        </center>
+        <hr />
+        <dt>Senha:</dt>
+        <dd>
+            [
+            @if (Model.HasPassword)
+        {
+            @Html.ActionLink("Alterar sua senha", "ChangePassword")
+    }
+    else
+    {
+        @Html.ActionLink("Criar", "SetPassword")
+}
+            ]
+        </dd>
     </dl>
 </div>

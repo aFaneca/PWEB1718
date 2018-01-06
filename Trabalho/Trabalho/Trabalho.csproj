@@ -379,7 +379,6 @@
     <Content Include="Views\Perfil\Index.cshtml" />
     <Content Include="Views\Perfil\Create.cshtml" />
     <Content Include="Views\Manage\Administrador\Index.cshtml" />
-    <Content Include="Views\Manage\Geral\Index.cshtml" />
     <Content Include="Views\Manage\Instituições\Index.cshtml" />
     <Content Include="Views\Manage\Pais\Index.cshtml" />
     <Content Include="Views\Perfil\Membros.cshtml" />

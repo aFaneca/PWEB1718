@@ -15,14 +15,14 @@ namespace Trabalho.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "A solução perfeita para os seus filhos!";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Estamos à espera do seu feedback.";
 
             return View();
         }
