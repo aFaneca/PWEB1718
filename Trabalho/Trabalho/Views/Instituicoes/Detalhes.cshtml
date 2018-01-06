@@ -1,0 +1,122 @@
+﻿@model Trabalho.Models.Instituicao
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Instituicao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Creche)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Creche)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreEscolar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreEscolar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransporteCriancas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransporteCriancas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AulasNatacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AulasNatacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AulasMusica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AulasMusica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PontuacaoTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PontuacaoTotal)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RatingMedio)/5 (Avaliações: @Html.DisplayFor(model => model.Avaliacoes) )
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Avaliacoes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacoes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RatingMedio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RatingMedio)
+        </dd>*@
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |*@
+    @Html.ActionLink("Voltar à lista", "Lista")
+</p>

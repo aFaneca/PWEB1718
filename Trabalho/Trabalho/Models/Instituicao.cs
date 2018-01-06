@@ -36,5 +36,16 @@ namespace Trabalho.Models
         public virtual ICollection<Candidatura> Candidaturas { get; set; }
         //public virtual UserViewModel Utilizador { get; set; }
 
+
+        public int PontuacaoTotal { get; set; }
+
+        public int Rating { get; set; }
+
+        public int Avaliacoes { get; set; }
+
+        public double MediaAvaliacoes(int rating, int nAvaliacoes){ return rating/nAvaliacoes; }
+
+
+        public double RatingMedio { get; set; }
     }
 }

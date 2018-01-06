@@ -235,6 +235,62 @@
     <Compile Include="Migrations\201801060302309_13.Designer.cs">
       <DependentUpon>201801060302309_13.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801061456364_ratings.cs" />
+    <Compile Include="Migrations\201801061456364_ratings.Designer.cs">
+      <DependentUpon>201801061456364_ratings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801061504067_ratings2.cs" />
+    <Compile Include="Migrations\201801061504067_ratings2.Designer.cs">
+      <DependentUpon>201801061504067_ratings2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801061552272_avaliar.cs" />
+    <Compile Include="Migrations\201801061552272_avaliar.Designer.cs">
+      <DependentUpon>201801061552272_avaliar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801061625207_modd.cs" />
+    <Compile Include="Migrations\201801061625207_modd.Designer.cs">
+      <DependentUpon>201801061625207_modd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801061702555_FixModelState.cs" />
+    <Compile Include="Migrations\201801061702555_FixModelState.Designer.cs">
+      <DependentUpon>201801061702555_FixModelState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801061707099_FixModelState1.cs" />
+    <Compile Include="Migrations\201801061707099_FixModelState1.Designer.cs">
+      <DependentUpon>201801061707099_FixModelState1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801061736029_FixModelState2.cs" />
+    <Compile Include="Migrations\201801061736029_FixModelState2.Designer.cs">
+      <DependentUpon>201801061736029_FixModelState2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801061802158_Édesta.cs" />
+    <Compile Include="Migrations\201801061802158_Édesta.Designer.cs">
+      <DependentUpon>201801061802158_Édesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801061808047_Édesta1.cs" />
+    <Compile Include="Migrations\201801061808047_Édesta1.Designer.cs">
+      <DependentUpon>201801061808047_Édesta1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801061809296_Éagora.cs" />
+    <Compile Include="Migrations\201801061809296_Éagora.Designer.cs">
+      <DependentUpon>201801061809296_Éagora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801061821353_ÉagoraSIIM1.cs" />
+    <Compile Include="Migrations\201801061821353_ÉagoraSIIM1.Designer.cs">
+      <DependentUpon>201801061821353_ÉagoraSIIM1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801061842480_hehehehe~9.cs" />
+    <Compile Include="Migrations\201801061842480_hehehehe~9.Designer.cs">
+      <DependentUpon>201801061842480_hehehehe~9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801061850371_hehehehe~911.cs" />
+    <Compile Include="Migrations\201801061850371_hehehehe~911.Designer.cs">
+      <DependentUpon>201801061850371_hehehehe~911.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801061908581_hehehehe~9111.cs" />
+    <Compile Include="Migrations\201801061908581_hehehehe~9111.Designer.cs">
+      <DependentUpon>201801061908581_hehehehe~9111.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Candidatura.cs" />
@@ -350,6 +406,9 @@
     <Content Include="Views\Candidaturas\Edit.cshtml" />
     <Content Include="Views\Candidaturas\Index.cshtml" />
     <Content Include="Views\Candidaturas\Lista.cshtml" />
+    <Content Include="Views\Instituicoes\Lista.cshtml" />
+    <Content Include="Views\Instituicoes\Detalhes.cshtml" />
+    <Content Include="Views\Candidaturas\Avaliar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -383,6 +442,48 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801060302309_13.resx">
       <DependentUpon>201801060302309_13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061456364_ratings.resx">
+      <DependentUpon>201801061456364_ratings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061504067_ratings2.resx">
+      <DependentUpon>201801061504067_ratings2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061552272_avaliar.resx">
+      <DependentUpon>201801061552272_avaliar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061625207_modd.resx">
+      <DependentUpon>201801061625207_modd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061702555_FixModelState.resx">
+      <DependentUpon>201801061702555_FixModelState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061707099_FixModelState1.resx">
+      <DependentUpon>201801061707099_FixModelState1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061736029_FixModelState2.resx">
+      <DependentUpon>201801061736029_FixModelState2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061802158_Édesta.resx">
+      <DependentUpon>201801061802158_Édesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061808047_Édesta1.resx">
+      <DependentUpon>201801061808047_Édesta1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061809296_Éagora.resx">
+      <DependentUpon>201801061809296_Éagora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061821353_ÉagoraSIIM1.resx">
+      <DependentUpon>201801061821353_ÉagoraSIIM1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061842480_hehehehe~9.resx">
+      <DependentUpon>201801061842480_hehehehe~9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061850371_hehehehe~911.resx">
+      <DependentUpon>201801061850371_hehehehe~911.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061908581_hehehehe~9111.resx">
+      <DependentUpon>201801061908581_hehehehe~9111.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

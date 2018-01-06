@@ -39,9 +39,10 @@
                     @Html.DisplayFor(modelItem => item.InstituicaoId)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.CandidaturaId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.CandidaturaId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.CandidaturaId })
+                    @Html.ActionLink("Editar", "Edit", new { id = item.CandidaturaId }) |
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.CandidaturaId }) |
+                    @Html.ActionLink("Cancelar Candidatura", "Delete", new { id = item.CandidaturaId }) | 
+                    @Html.ActionLink("Avaliar Instituição", "Avaliar", new { id = item.CandidaturaId })
                 </td>
             </tr>
         }

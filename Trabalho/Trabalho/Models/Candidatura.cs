@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
@@ -28,5 +29,9 @@ namespace Trabalho.Models
 
         [NotMapped]
         public string NomeCrianca { get; set; }
+
+        [DisplayName("Avaliação")]
+        [Range(1,5)]
+        public int? Avaliacao { get; set; }
     }
 }

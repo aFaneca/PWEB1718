@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Web;
 
@@ -18,6 +19,7 @@ namespace Trabalho.Models
         public TPContext() : base("name=TPContext")
         {
         }
+        
 
         public System.Data.Entity.DbSet<Trabalho.Models.Instituicao> Instituicaos { get; set; }
 

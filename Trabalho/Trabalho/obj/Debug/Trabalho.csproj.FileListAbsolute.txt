@@ -147,3 +147,17 @@ D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\o
 D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\obj\Debug\Trabalho.Migrations._100.resources
 D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\obj\Debug\Trabalho.Migrations._109.resources
 D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\obj\Debug\Trabalho.Migrations._13.resources
+D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\obj\Debug\Trabalho.Migrations.ratings.resources
+D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\obj\Debug\Trabalho.Migrations.ratings2.resources
+D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\obj\Debug\Trabalho.Migrations.avaliar.resources
+D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\obj\Debug\Trabalho.Migrations.modd.resources
+D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\obj\Debug\Trabalho.Migrations.FixModelState.resources
+D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\obj\Debug\Trabalho.Migrations.FixModelState1.resources
+D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\obj\Debug\Trabalho.Migrations.FixModelState2.resources
+D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\obj\Debug\Trabalho.Migrations.Édesta.resources
+D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\obj\Debug\Trabalho.Migrations.Édesta1.resources
+D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\obj\Debug\Trabalho.Migrations.Éagora.resources
+D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\obj\Debug\Trabalho.Migrations.ÉagoraSIIM1.resources
+D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\obj\Debug\Trabalho.Migrations.hehehehe9.resources
+D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\obj\Debug\Trabalho.Migrations.hehehehe911.resources
+D:\DOCUMENTOS\DOCUMENTOS\ISEC\ANO 3\1 SEMESTRE\PWEB\Trabalho\Trabalho\Trabalho\obj\Debug\Trabalho.Migrations.hehehehe9111.resources

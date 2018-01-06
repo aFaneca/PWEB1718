@@ -22,13 +22,44 @@ namespace Trabalho.Controllers
             return View("Todas/Index", db.Instituicaos.ToList());
         }
 
-        // GET: Instituicoes
-        public ActionResult Index()
+        //[AllowAnonymous]
+        //public ActionResult Index()
+        //{
+        //    if (!User.IsInRole("Administrador") && !User.IsInRole("Instituição"))
+        //        return RedirectToAction("Lista");
+        //    return View(db.Instituicaos.ToList());
+        //}
+
+
+            // GET: Instituicoes
+            public ActionResult Index()
         {
+            
             return View(db.Instituicaos.ToList());
         }
 
-        
+        [AllowAnonymous]
+        public ActionResult Lista()
+        {
+
+            return View(db.Instituicaos.ToList());
+        }
+
+        [AllowAnonymous]
+        public ActionResult Detalhes(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Instituicao instituicao = db.Instituicaos.Find(id);
+            if (instituicao == null)
+            {
+                return HttpNotFound();
+            }
+            return View(instituicao);
+        }
+
 
         // GET: Instituicoes/Details/5
         public ActionResult Details(int? id)
@@ -58,13 +89,21 @@ namespace Trabalho.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Nome,Tipo,Creche,PreEscolar,TransporteCriancas,AulasNatacao,AulasMusica,Valor,UserId")] Instituicao instituicao)
         {
-            if (ModelState.IsValid)
-            {
-                instituicao.UserId = User.Identity.GetUserId();
-                db.Instituicaos.Add(instituicao);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+           
+                
+
+                if (ModelState.IsValid)
+                {
+
+                    instituicao.UserId = User.Identity.GetUserId();
+                    instituicao.Rating = instituicao.Avaliacoes = instituicao.PontuacaoTotal = 0;
+                    instituicao.RatingMedio = 0.0;
+                    db.Instituicaos.Add(instituicao);
+                    db.SaveChanges();
+
+                    return RedirectToAction("Index");
+                }
+            
 
             return View(instituicao);
         }
@@ -89,10 +128,13 @@ namespace Trabalho.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Nome,Tipo,Creche,PreEscolar,TransporteCriancas,AulasNatacao,AulasMusica,Valor,UserId")] Instituicao instituicao)
+        public ActionResult Edit([Bind(Include = "ID,Nome,Tipo,Creche,PreEscolar,TransporteCriancas,AulasNatacao,AulasMusica,Valor,UserId,PontuacaoTotal,Rating,Avaliacoes,RatingMedio")] Instituicao instituicao)
         {
+            // return Content(ModelState.Keys.FirstOrDefault());
+            //var errors = ModelState.Values.SelectMany(v => v.Errors);
             if (ModelState.IsValid)
             {
+                instituicao.UserId = User.Identity.GetUserId();
                 db.Entry(instituicao).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -108,6 +150,7 @@ namespace Trabalho.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Instituicao instituicao = db.Instituicaos.Find(id);
+            //instituicao.RatingMedio = instituicao.MediaAvaliacoes(instituicao.PontuacaoTotal.Value, instituicao.Avaliacoes.Value);
             if (instituicao == null)
             {
                 return HttpNotFound();
