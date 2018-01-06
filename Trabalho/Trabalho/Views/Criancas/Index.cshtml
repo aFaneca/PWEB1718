@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Trabalho.Models.Crianca>
-
+@using Microsoft.AspNet.Identity;
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Gestão de Crianças";
 }
 
 <h2>Index</h2>
@@ -11,41 +11,45 @@
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Instituicao.Nome)
-        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Candidatura.Estado)
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Idade)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Nome)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.UserId)
-        </th>
+        </th>*@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Instituicao.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Idade)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserId)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CriancaId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CriancaId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CriancaId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        if (item.UserId == HttpContext.Current.User.Identity.GetUserId() || User.IsInRole("Administrador"))
+        {
+        <tr>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Candidatura.Estado)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Idade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>*@
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CriancaId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CriancaId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CriancaId })
+            </td>
+        </tr>
+        }
+    }
 
 </table>

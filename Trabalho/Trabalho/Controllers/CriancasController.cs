@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -17,7 +18,7 @@ namespace Trabalho.Controllers
         // GET: Criancas
         public ActionResult Index()
         {
-            var criancas = db.Criancas.Include(c => c.Instituicao);
+            var criancas = db.Criancas.Include(c => c.Candidatura);
             return View(criancas.ToList());
         }
 
@@ -39,7 +40,7 @@ namespace Trabalho.Controllers
         // GET: Criancas/Create
         public ActionResult Create()
         {
-            ViewBag.InstituicaoId = new SelectList(db.Instituicaos, "ID", "Nome");
+            ViewBag.CandidaturaId = new SelectList(db.Candidaturas, "CandidaturaId", "Estado");
             return View();
         }
 
@@ -48,16 +49,17 @@ namespace Trabalho.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CriancaId,Idade,Nome,UserId,InstituicaoId")] Crianca crianca)
+        public ActionResult Create([Bind(Include = "CriancaId,Idade,Nome,UserId,CandidaturaId")] Crianca crianca)
         {
             if (ModelState.IsValid)
             {
+                crianca.UserId = User.Identity.GetUserId();
                 db.Criancas.Add(crianca);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.InstituicaoId = new SelectList(db.Instituicaos, "ID", "Nome", crianca.InstituicaoId);
+            ViewBag.CandidaturaId = new SelectList(db.Candidaturas, "CandidaturaId", "Estado", crianca.CandidaturaId);
             return View(crianca);
         }
 
@@ -73,7 +75,7 @@ namespace Trabalho.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.InstituicaoId = new SelectList(db.Instituicaos, "ID", "Nome", crianca.InstituicaoId);
+            ViewBag.CandidaturaId = new SelectList(db.Candidaturas, "CandidaturaId", "Estado", crianca.CandidaturaId);
             return View(crianca);
         }
 
@@ -82,15 +84,16 @@ namespace Trabalho.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CriancaId,Idade,Nome,UserId,InstituicaoId")] Crianca crianca)
+        public ActionResult Edit([Bind(Include = "CriancaId,Idade,Nome,UserId,CandidaturaId")] Crianca crianca)
         {
             if (ModelState.IsValid)
             {
+                crianca.UserId = User.Identity.GetUserId();
                 db.Entry(crianca).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.InstituicaoId = new SelectList(db.Instituicaos, "ID", "Nome", crianca.InstituicaoId);
+            ViewBag.CandidaturaId = new SelectList(db.Candidaturas, "CandidaturaId", "Estado", crianca.CandidaturaId);
             return View(crianca);
         }
 

@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Trabalho.Models.Candidatura>
+@using Microsoft.AspNet.Identity;
+@{
+    ViewBag.Title = "Lista de Candidaturas";
+}
+
+<h2>Lista de Candidaturas</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            
+            @Html.DisplayNameFor(model => model.CriancaId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InstituicaoId)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>*@
+        <th></th><th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        //if (item.UserId == HttpContext.Current.User.Identity.GetUserId() || User.IsInRole("Administrador"))
+        //{
+        foreach (var p in ViewBag.NomesInstituicoes)
+        {
+            if (p.ID == item.InstituicaoId)
+            {
+                <tr>
+                    <td>
+
+                        @Html.DisplayFor(modelItem => item.Estado)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NomeCrianca)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NomeInstituicao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserId)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Aprovar", "Aprovar", new { id = item.CandidaturaId }) |
+                        @Html.ActionLink("Rejeitar", "Rejeitar", new { id = item.CandidaturaId })
+                        @*@Html.ActionLink("Edit", "Edit", new { id = item.CandidaturaId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.CandidaturaId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.CandidaturaId })*@
+                    </td>
+                </tr>
+            }
+        }
+
+    }
+
+</table>
+
+

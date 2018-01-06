@@ -194,6 +194,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CandidaturasController.cs" />
     <Compile Include="Controllers\CriancasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstituicoesController.cs" />
@@ -222,8 +223,21 @@
     <Compile Include="Migrations\201801052103530_1ToManyv2.Designer.cs">
       <DependentUpon>201801052103530_1ToManyv2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801060046261_100.cs" />
+    <Compile Include="Migrations\201801060046261_100.Designer.cs">
+      <DependentUpon>201801060046261_100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801060217443_109.cs" />
+    <Compile Include="Migrations\201801060217443_109.Designer.cs">
+      <DependentUpon>201801060217443_109.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801060302309_13.cs" />
+    <Compile Include="Migrations\201801060302309_13.Designer.cs">
+      <DependentUpon>201801060302309_13.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Candidatura.cs" />
     <Compile Include="Models\Crianca.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Instituicao.cs" />
@@ -330,6 +344,12 @@
     <Content Include="Views\Criancas\Details.cshtml" />
     <Content Include="Views\Criancas\Edit.cshtml" />
     <Content Include="Views\Criancas\Index.cshtml" />
+    <Content Include="Views\Candidaturas\Create.cshtml" />
+    <Content Include="Views\Candidaturas\Delete.cshtml" />
+    <Content Include="Views\Candidaturas\Details.cshtml" />
+    <Content Include="Views\Candidaturas\Edit.cshtml" />
+    <Content Include="Views\Candidaturas\Index.cshtml" />
+    <Content Include="Views\Candidaturas\Lista.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -354,6 +374,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801052103530_1ToManyv2.resx">
       <DependentUpon>201801052103530_1ToManyv2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801060046261_100.resx">
+      <DependentUpon>201801060046261_100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801060217443_109.resx">
+      <DependentUpon>201801060217443_109.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801060302309_13.resx">
+      <DependentUpon>201801060302309_13.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

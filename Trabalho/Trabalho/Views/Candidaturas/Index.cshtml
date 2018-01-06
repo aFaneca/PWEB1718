@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Trabalho.Models.Candidatura>
+@using Microsoft.AspNet.Identity;
+@{
+    ViewBag.Title = "Candidaturas";
+}
+
+<h2>Candidaturas</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CriancaId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InstituicaoId)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        
+        if (item.UserId == HttpContext.Current.User.Identity.GetUserId() || User.IsInRole("Administrador"))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CriancaId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InstituicaoId)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CandidaturaId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.CandidaturaId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CandidaturaId })
+                </td>
+            </tr>
+        }
+    }
+
+</table>

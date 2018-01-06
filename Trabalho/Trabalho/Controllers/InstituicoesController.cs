@@ -11,7 +11,7 @@ using Trabalho.Models;
 
 namespace Trabalho.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Instituição, Administrador")]
     public class InstituicoesController : Controller
     {
         private TPContext db = new TPContext();

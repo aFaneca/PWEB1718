@@ -33,7 +33,7 @@ namespace Trabalho.Models
         [HiddenInput(DisplayValue = false)]
         public string UserId { get; set; }
 
-        public virtual ICollection<Crianca> Criancas { get; set; }
+        public virtual ICollection<Candidatura> Candidaturas { get; set; }
         //public virtual UserViewModel Utilizador { get; set; }
 
     }
