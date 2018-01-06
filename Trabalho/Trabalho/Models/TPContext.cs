@@ -19,6 +19,8 @@ namespace Trabalho.Models
         {
         }
 
-        public System.Data.Entity.DbSet<Trabalho.Models.Pescador> Pescadors { get; set; }
+        public System.Data.Entity.DbSet<Trabalho.Models.Instituicao> Instituicaos { get; set; }
+
+        public System.Data.Entity.DbSet<Trabalho.Models.Crianca> Criancas { get; set; }
     }
 }

@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Membros";
+}
+
+<h2>Perfis</h2>
+
+@model IEnumerable<Trabalho.Models.UserViewModel>
+@*<div class="row">*@
+    <h4>Membros Registados</h4>
+    <table class="table">
+        <tr>
+            <th>@Html.Label("Nome")</th>
+            <th>@Html.Label("Email")</th>
+            <th>@Html.Label("Perfil")</th>
+        </tr>
+        @foreach (var membro in Model)
+    {
+        <tr>
+            <td>@membro.Username</td>
+            <td>@membro.Email</td>
+            <td>@membro.Role</td>
+        </tr>
+}
+        </table>
+@*</div>*@

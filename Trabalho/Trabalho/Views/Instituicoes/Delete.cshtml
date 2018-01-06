@@ -1,0 +1,88 @@
+﻿@model Trabalho.Models.Instituicao
+
+@{
+    ViewBag.Title = "Remover Instituição";
+}
+
+<h2>Remover Instituição</h2>
+
+<h3>Tem a certeza que deseja remover esta entrada?</h3>
+<div>
+    <h4>Instituicao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Creche)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Creche)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreEscolar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreEscolar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransporteCriancas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransporteCriancas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AulasNatacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AulasNatacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AulasMusica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AulasMusica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Remover" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar à lista", "Index")
+        </div>
+    }
+</div>

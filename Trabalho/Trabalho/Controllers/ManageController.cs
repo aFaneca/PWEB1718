@@ -82,7 +82,7 @@ namespace Trabalho.Controllers
             if (User.IsInRole("Pais"))
                 return RedirectToAction("Pais", "Manage");
             if (User.IsInRole("Instituição"))
-                return RedirectToAction("Instituição", "Manage");
+                return RedirectToAction("Instituições", "Manage");
             if (User.IsInRole("Geral"))
                 return RedirectToAction("Geral", "Manage");
 
@@ -470,7 +470,7 @@ namespace Trabalho.Controllers
 
         //
         // GET: /Manage/Instituições
-        [Authorize(Roles = "Instituições")]
+        [Authorize(Roles = "Instituição")]
         public async Task<ActionResult> Instituições(ManageMessageId? message)
         {
             ViewBag.StatusMessage =

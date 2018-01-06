@@ -1,0 +1,26 @@
+@model Trabalho.Models.UserViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>UserViewModel</legend>
+
+    <div class="display-label">Username</div>
+    <div class="display-field">@Model.Username</div>
+
+    <div class="display-label">Email</div>
+    <div class="display-field">@Model.Email</div>
+
+    <div class="display-label">Role</div>
+    <div class="display-field">@Model.Role</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+

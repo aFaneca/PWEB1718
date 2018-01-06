@@ -3,8 +3,12 @@
     "",
     "\\Trabalho",
     "\\Trabalho\\Trabalho",
-    "\\Trabalho\\Trabalho\\App_Data"
+    "\\Trabalho\\Trabalho\\App_Data",
+    "\\Trabalho\\Trabalho\\App_Start",
+    "\\Trabalho\\Trabalho\\Controllers",
+    "\\Trabalho\\Trabalho\\Migrations",
+    "\\Trabalho\\Trabalho\\Models"
   ],
-  "SelectedNode": "\\Trabalho\\Trabalho\\App_Data\\TrabalhoPratico_log.ldf",
+  "SelectedNode": "\\Trabalho\\Trabalho\\Models\\Instituicao.cs",
   "PreviewInSolutionExplorer": false
 }
