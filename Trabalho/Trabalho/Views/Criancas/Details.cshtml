@@ -1,13 +1,13 @@
 ﻿@model Trabalho.Models.Crianca
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalhes";
 }
 
-<h2>Details</h2>
+<h2>Detalhes da Criança</h2>
 
 <div>
-    <h4>Crianca</h4>
+    <h4>Criança</h4>
     <hr />
     <dl class="dl-horizontal">
         @*<dt>
@@ -45,6 +45,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CriancaId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.CriancaId }) |
+    @Html.ActionLink("Voltar à lista", "Index")
 </p>

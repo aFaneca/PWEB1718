@@ -1,9 +1,10 @@
-﻿
+﻿@using Microsoft.AspNet.Identity
 @{
     ViewBag.Title = "Gestão de Instituições";
 }
 
-<h2>@ViewBag.Title</h2>
+
+<h2>Bem-vindo, @User.Identity.GetUserName()!</h2>
 
 <p class="text-success">@ViewBag.StatusMessage</p>
 <div>
@@ -77,10 +78,10 @@
 
 
     <div class="col-xs-6">
-        <a href="/Instituicoes" class="btn btn-warning btn-block">Gerir Instituições</a>
+        <a href="/Instituicoes" class="btn btn-warning btn-block"><span class="glyphicon glyphicon-education"></span>    Gerir Instituições</a>
     </div>
     <div class="col-xs-6">
-        <a href="/Candidaturas/Lista" class="btn btn-success btn-block">Gerir Candidaturas</a>
+        <a href="/Candidaturas/Lista" class="btn btn-success btn-block"><span class="glyphicon glyphicon-folder-open"></span>   Gerir Candidaturas</a>
     </div>
     <br />
     <br />
@@ -100,5 +101,5 @@
             }
             ]
         </dd>
-        </dl>
+    </dl>
 </div>
